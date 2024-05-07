@@ -3,7 +3,7 @@ import Sidebar from '../SideBar'
 import { useDispatch } from "react-redux";
 import { fetchAllCourseInfo } from "../../../redux/course/courseAction";
 import axios from "axios"
-
+import Toast_Comp from "../../../components/Toast/Toast_Comp";
 const CreateCourse = () => {
     const [show, setShow] = useState(false);
     const [lgShow, setLgShow] = useState(false);
@@ -35,6 +35,7 @@ const CreateCourse = () => {
     const courseFormHandler = (e) => {
       e.preventDefault();
       setLoading(true);
+  
       const formData = new FormData();
       formData.append("courseName", courseName);
       formData.append("courseDescription", courseDescription);
@@ -42,7 +43,7 @@ const CreateCourse = () => {
       formData.append("courseLink", courseLink);
       formData.append("coursePrice", coursePrice);
       formData.append("pdf", coursePdf);
-
+    
       // Append lectures data
       formData.append("lectures", JSON.stringify(lectures));
     
@@ -56,8 +57,8 @@ const CreateCourse = () => {
           },
         })
         .then((response) => {
-          setToast(true);
           setLoading(false);
+          setToast(true);
           setCourseDescription("");
           setCourseName("");
           setCourseThumbnail("");
@@ -77,12 +78,15 @@ const CreateCourse = () => {
             type: "GET__COURSES",
             payload: true,
           });
+          if (response.data.message) {
+           
+          }
         })
         .catch((error) => {
           console.error("Error:", error);
         });
     };
-
+    
     const handleLectureChange = (index, e) => {
       const { name, value } = e.target;
       const list = [...lectures];
@@ -124,6 +128,13 @@ const CreateCourse = () => {
                     </ol>
                   </nav>
                 </div>
+                
+      <Toast_Comp
+        setToast={setToast}
+        renderToast={toast}
+        msg="Course Uploaded Successfully"
+      />
+
                 <div className="row" id="deleteTableItem">
                   <div className="col-md-12">
                     <div className="main-card card d-flex h-100 flex-column">

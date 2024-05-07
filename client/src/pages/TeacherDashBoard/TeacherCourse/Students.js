@@ -71,7 +71,7 @@ const Students = () => {
                     <div className="card mb-5">
                         <div className="card-body">
                             <div className="table-responsive-lg">
-                                <table id="dataTable" className="table">
+                                <table id="dataTable" className="table text-center">
                                     <thead>
                                         <tr>
                                       
@@ -82,7 +82,7 @@ const Students = () => {
                                        
                                             <th><strong>Last Activity</strong></th>
                                             <th><strong>Status</strong></th>
-                                            <th><strong>Action</strong></th>
+                                        
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -126,20 +126,7 @@ const Students = () => {
                                                             </div>
                                                         </div>
                                                                                                     </td>
-                                                <td className="tableAction">
-                                                    <div className="action-icon">
-                                                                                                                    <a data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                data-bs-custom-className="custom-tooltip"
-                                                                data-bs-title="Edit Course"
-                                                                href="https://admin.razinskills.com/category/edit/4"><i
-                                                                    className="bi bi-pen Circleicon"></i></a>
-                                                            <a data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                data-bs-custom-className="custom-tooltip"
-                                                                data-bs-title="Delete Category" href="#"
-                                                                onclick="deleteAction('https://admin.razinskills.com/category/delete/4')"><i
-                                                                    className="bi bi-trash3 Circleicon"></i></a>
-                                                                                                            </div>
-                                                </td>
+                                              
                                             </tr>
                                                    ))}
                                                                                    

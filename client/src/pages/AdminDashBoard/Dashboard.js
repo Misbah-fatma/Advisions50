@@ -111,14 +111,14 @@ import SideBar from './SideBar'
                             <div className="table-responsive-lg">
                                 <table className="table">
                                     <thead>
-                                        <tr>
+                                        <tr className="text-center">
                                             <th><strong>ID</strong></th>
                                             <th><strong>Course</strong></th>
                                             <th><strong>Category</strong></th>
                                            
                                             <th><strong>Price</strong></th>
-                                            <th><strong>Instructor</strong></th>
-                                            <th><strong>Action</strong></th>
+                                            <th><strong>Course Link</strong></th>
+                                           
                                         </tr>
                                     </thead>
                                     {Array.isArray(courseData) && courseData.map((row) => (
@@ -127,18 +127,7 @@ import SideBar from './SideBar'
                                                 <td className="tableId">{row._id}</td>
                                                 <td className="tableProduct">
                                                     <div className="listproduct-section">
-                                                        <div className="listproducts-image">
-                                                        <img
-                    style={{
-                      height: "40px",
-                      width: "60px",
-                      objectFit: "contain",
-                    }}
-                    src={row.courseThumbnail}
-                    alt=""
-                  />
-                                                       
-                                                        </div>
+                                                        
                                                         <div className="product-pera">
                                                             <p className="priceDis">{row.courseName}</p>
                                                         </div>
@@ -148,12 +137,10 @@ import SideBar from './SideBar'
                                                 </td>
                                                
                                                 <td className="tableId">{row.coursePrice}</td>
-                                                <td className="tableId">{row.teacher}</td>
-                                                <td className="tableAction">
-                                                    <div className="action-icon">
-                                                    <td className="tableId">{row.courseDescription}</td>
-                                                    </div>
-                                                </td>
+                                                
+                                           
+                                                    <td className="tableId">{row.courseLink}</td>
+                                                  
                                             </tr>
                                                                                   
                                                                                    

@@ -1,26 +1,9 @@
-
 import React, { useEffect } from 'react';
-import Typed from 'typed.js';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Home = () => {
-    useEffect(() => {
-        var typed = new Typed('.typed-words', {
-          strings: ["new explorations"," career advancement"," or learn a different skill"],
-          typeSpeed: 80,
-          backSpeed: 80,
-          backDelay: 4000,
-          startDelay: 1000,
-          loop: true,
-          showCursor: true
-        });
-    
-        return () => {
-          typed.destroy();
-        };
-      }, []);
-      
+     
   return (
     <div>
         <div className="site-wrap">
@@ -34,7 +17,7 @@ const Home = () => {
             <div className="row justify-content-center mb-4">
               <div className="col-md-8 text-center">
                 <h1>   We're dedicated to empowering your learning journey,  </h1>
-                <p className="lead mb-5 h4">whether you seek skill enhancement, <span className="typed-words"></span> </p>
+                <p className="lead mb-5 h4">whether you seek skill enhancement, <span> new explorations, career advancement, or learn a different skill</span> </p>
                 <p>Unlock your potential with our tailored courses designed to meet your unique learning goals.</p>
                 <div>
                   <a data-fancybox data-ratio="2" href="./Advisions.mp4" className="btn btn-primary btn-md">Watch Video</a></div>

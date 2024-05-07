@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from '../SideBar'
 import axios from "axios";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { IconButton} from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+import { Link } from "react-router-dom";
 
 
 const Student = () => {
@@ -23,14 +27,14 @@ const Student = () => {
     }, []);
   
     const handleDeleteUser = async (userId) => {
-      try {
-        const response = await axios.delete(`http://localhost:5000/users/${userId}`);
-        setMessage(response.data.message);
-        userList();
-      } catch (error) {
-        setMessage(error.response.data.message);
-      }
-    };
+        try {
+          const response = await axios.delete(`http://localhost:5000/users/${userId}`);
+          setMessage(response.data.message);
+          userList();
+        } catch (error) {
+          setMessage(error.response.data.message);
+        }
+      };
   
     const [show, setShow] = useState(false);
   
@@ -128,16 +132,12 @@ const Student = () => {
                                                                                                     </td>
                                                 <td className="tableAction">
                                                     <div className="action-icon">
-                                                                                                                    <a data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                data-bs-custom-className="custom-tooltip"
-                                                                data-bs-title="Edit Course"
-                                                                href="https://admin.razinskills.com/category/edit/4"><i
-                                                                    className="bi bi-pen Circleicon"></i></a>
-                                                            <a data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                data-bs-custom-className="custom-tooltip"
-                                                                data-bs-title="Delete Category" href="#"
-                                                                onclick="deleteAction('https://admin.razinskills.com/category/delete/4')"><i
-                                                                    className="bi bi-trash3 Circleicon"></i></a>
+                                             <Link to= "/updatePassword">   <IconButton onClick={handleShow}>
+                    <EditIcon color="primary" />
+                  </IconButton></Link>  
+                                                        <IconButton onClick={() => handleDeleteUser(row._id)}>
+                    <DeleteIcon style={{ color: "red" }} />
+                  </IconButton>
                                                                                                             </div>
                                                 </td>
                                             </tr>

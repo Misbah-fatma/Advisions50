@@ -44,6 +44,10 @@ import CoursesInfo from  './pages/StudentDashBoard/Course/CourseInfo.js'
 import CourseChapter from './pages/StudentDashBoard/Course/Chapter.js'
 import StudentInfo from './pages/StudentDashBoard/StudentsEnrolled/Student.js'
 import StudentsDetails from './pages/TeacherDashBoard/TeacherCourse/Students.js';
+import TeacherCourse from "./pages/TeacherDashBoard/Course Management/CourseInfo.js"
+import TeacherCategory from "./pages/TeacherDashBoard/Course Management/Category.js"
+import TeacherChapter from "./pages/TeacherDashBoard/Course Management/Chapter.js"
+import UpdatePassword from "./pages/AdminDashBoard/Enroll Management/UpdatePassword.js"
 
 const AdminRoute = ({ children, isAdmin }) => {
   // Assuming isAdmin determines if the logged-in user is an admin
@@ -139,6 +143,10 @@ const Routing = () => {
   
      <Route exact path="/student"  element={<StudentInfo />} />
      <Route exact path="/studentDetails"  element={<StudentsDetails />} />
+     <Route exact path="/TeacherDashCourse"  element={<TeacherCourse />} />
+     <Route exact path="/TeacherDashCategory"  element={<TeacherCategory />} />
+     <Route exact path="/TeacherDashChapter"  element={<TeacherChapter />} />
+     <Route exact path="/updatePassword"  element={<UpdatePassword />} />
       <Route  path="*" element={<NotFound />}>
         
       </Route>

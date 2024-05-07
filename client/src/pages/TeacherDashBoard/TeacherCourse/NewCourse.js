@@ -24,6 +24,7 @@ const CreateCourse = () => {
         videoUrl: ""
       }
     ]);
+    const [showLectureButton, setShowLectureButton] = useState(true);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -117,8 +118,8 @@ const CreateCourse = () => {
                 <div className="page-title-actions px-3 d-flex">
                   <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                      <li className="breadcrumb-item"><a href="https://admin.razinskills.com">Dashboard</a></li>
-                      <li className="breadcrumb-item"><a href="https://admin.razinskills.com/instructor/list">Instructor</a></li>
+                      <li className="breadcrumb-item"><a href="">Dashboard</a></li>
+                      <li className="breadcrumb-item"><a href="">Instructor</a></li>
                       <li className="breadcrumb-item active" aria-current="page">Create</li>
                     </ol>
                   </nav>
@@ -227,9 +228,13 @@ const CreateCourse = () => {
                               </div>
                             </div>
                             <div className="col-12">
-                              <h3>Add Lectures</h3>
+                              <div className="d-flex justify-content-between align-items-center mb-3">
+                                <h3></h3>
+                                {showLectureButton && <button type="button" className="btn btn-primary" onClick={handleAddLecture}>Add Lecture</button>}
+                              </div>
                               {lectures.map((lecture, index) => (
                                 <div key={index}>
+                                  <h4>Add Lecture {index + 1}</h4>
                                   <div className="mb-3">
                                     <label className="form-label">Title</label>
                                     <input
@@ -262,10 +267,9 @@ const CreateCourse = () => {
                                       name="videoUrl"
                                     />
                                   </div>
-                                  <button type="button" className="btn btn-danger" onClick={() => handleRemoveLecture(index)}>Remove</button>
+                                  <button type="button" className="btn btn-danger btn-sm float-right" onClick={() => handleRemoveLecture(index)}>Remove</button>
                                 </div>
                               ))}
-                              <button type="button" className="btn btn-primary" onClick={handleAddLecture}>Add Lecture</button>
                             </div>
                             <div className="col-12">
                               <button type="submit" className="btn bgBlue btn-dipBlue text-black">Create</button>

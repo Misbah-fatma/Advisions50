@@ -12,15 +12,15 @@ const Category = () => {
             <div className="page-title-actions px-3 d-flex">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="https://admin.razinskills.com">Dashboard</a></li>
+                        <li className="breadcrumb-item"><a href="">Dashboard</a></li>
                         <li className="breadcrumb-item active" aria-current="page">Category</li>
                     </ol>
                 </nav>
-                <div className="ms-auto mb-3">
+                {/* <div className="ms-auto mb-3">
                     <a href="https://admin.razinskills.com/category/create" className="btn-shadow mr-3 btn btn-dark ms-auto">
                         + New Category
                     </a>
-                </div>
+                </div> */}
             </div>
 
             <div className="row" id="deleteTableItem">
@@ -28,7 +28,7 @@ const Category = () => {
                     <div className="card mb-5">
                         <div className="card-body">
                             <div className="table-responsive-lg">
-                                <table id="dataTable" className="table">
+                                <table id="dataTable" className="table text-center">
                                     <thead>
                                         <tr>
                                             <th><strong>#</strong></th>

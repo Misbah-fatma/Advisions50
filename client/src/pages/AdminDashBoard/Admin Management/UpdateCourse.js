@@ -35,8 +35,8 @@ const CreateCourse = () => {
             <div className="page-title-actions px-3 d-flex">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="https://admin.razinskills.com">Dashboard</a></li>
-                        <li className="breadcrumb-item"><a href="https://admin.razinskills.com/instructor/list">Instructor</a></li>
+                        <li className="breadcrumb-item"><a href="">Dashboard</a></li>
+                        <li className="breadcrumb-item"><a href="">Instructor</a></li>
                         <li className="breadcrumb-item active" aria-current="page">Create</li>
                     </ol>
                 </nav>
@@ -152,27 +152,9 @@ const CreateCourse = () => {
                                         </div>
                                     </div>
 
-                                    <div className="col-12">
-                                        <div className="mb-3">
-                                            <div className="form-check">
-                                                <input id="activeInput" name="is_active" className="form-check-input"
-                                                    type="checkbox"/>
-                                                <label for="activeInput" className="form-check-label">Verify Account by
-                                                    Default</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                 
 
-                                    <div className="col-12">
-                                        <div className="mb-3">
-                                            <div className="form-check">
-                                                <input id="featuredInput" name="is_featured" className="form-check-input"
-                                                    type="checkbox"/>
-                                                <label for="featuredInput" className="form-check-label">Feature on
-                                                    Homepage</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                  
 
                                     <div className="col-12">
                                         <button type="submit" className="btn bgBlue btn-dipBlue text-black">Create</button>

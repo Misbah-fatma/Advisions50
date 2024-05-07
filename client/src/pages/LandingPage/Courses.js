@@ -115,37 +115,40 @@ const Products = () => {
       <>
         {filteredProducts.map((product) => {
           return (
-            <div key={product._id} className="col-md-4 col-sm-6 col-12 mb-4"> 
-              <Card className="course">
-                <img 
-                  src={product.courseThumbnail} 
-                  alt="Course thumbnail" 
-                  className="course-thumbnail card-img-top"
-                  style={{ height: "200px", objectFit: "cover" }} // Adjust height and object-fit
-                />
-                <div className="card-body">
-                  <h2 className="course-name card-title">{product.courseName}</h2>
-                  <p className="course-description card-text">{product.courseDescription}</p>
-                  <div className="course-details">
-                    <p className="creator">Creator - Mr. Santosh Singh</p>
-                    <p className="course-price">{product.coursePrice} $</p>
-                    <a href="/courseInfo1" className="course-lectures">{} Lectures</a>
-                  </div>
-                </div>
-                <div className="card-footer course-actions">
-                  <a href="/course" className="watch-now-btn btn btn-primary">
-                    Watch Now
-                  </a>
-                  <Button
-                    className="add-to-playlist-btn"
-                    disabled={loading}
-                    onClick={() => addProduct(product)}
-                  >
-                    Add to playlist
-                  </Button>
-                </div>
-              </Card>
-            </div>        
+<div key={product._id} className="col-md-4 col-sm-6 col-12 mb-4"> 
+  <Card className="course h-100 shadow-sm">
+    <img 
+      src={product.courseThumbnail} 
+      alt="Course thumbnail" 
+      className="course-thumbnail card-img-top"
+      style={{ height: "200px", objectFit: "cover" }} // Adjust height and object-fit
+    />
+    <div className="card-body">
+      <h2 className="course-name card-title">{product.courseName}</h2>
+      <p className="course-description card-text">{product.courseDescription}</p>
+      <div className="course-details d-flex justify-content-between align-items-center">
+        <p className="creator mb-0">Creator - Mr. Santosh Singh</p>
+        <p className="course-price mb-0 font-weight-medium"><b>Price : </b>{product.coursePrice} $</p>
+      </div>
+    </div>
+    <div className="card-footer course-actions d-flex justify-content-between">
+      <a href="/course" className="watch-now-btn btn btn-primary btn-sm">
+       More Details
+      </a>
+      <Button
+        className="add-to-playlist-btn btn btn-primary btn-sm text-white"
+        disabled={loading}
+        onClick={() => addProduct(product)}
+      >
+        Add to Cart
+      </Button>
+    </div>
+  </Card>
+</div>
+
+
+
+
           );
         })}
       </>

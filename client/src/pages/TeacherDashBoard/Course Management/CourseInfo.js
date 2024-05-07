@@ -34,7 +34,11 @@ const CourseInfo = ({course}) => {
                         <li className="breadcrumb-item active" aria-current="page">Course</li>
                     </ol>
                 </nav>
-
+                <div className="ms-auto mb-3">
+                    <a href="/createdashcourse" className="btn-shadow mr-3 btn btn-dark ms-auto">
+                        + New Course
+                    </a>
+                </div>
             </div>
 
             <div className="row" id="deleteTableItem">
@@ -44,7 +48,7 @@ const CourseInfo = ({course}) => {
                             <div className="table-responsive">
                                 <table id="dataTable" className="table table-responsive-xl">
                                     <thead>
-                                        <tr>
+                                        <tr className="text-center">
                                           
                                             <th><strong>ID</strong></th>
                                             <th><strong>Course</strong></th>
@@ -52,8 +56,8 @@ const CourseInfo = ({course}) => {
                                             <th><strong>Price</strong></th>
                                             <th><strong>Instructor</strong></th>
                                             <th><strong>Course Link</strong></th>
-                                            <th><strong>Status</strong></th>
-                                            <th><strong>Action</strong></th>
+                                           
+                                           
                                         </tr>
                                     </thead>
                                     {Array.isArray(courseData) && courseData.map((row) => (
@@ -64,17 +68,7 @@ const CourseInfo = ({course}) => {
                                               
                                                 <td className="tableProduct">
                                                     <div className="listproduct-section">
-                                                        <div className="listproducts-image">
-                                                        <img
-                    style={{
-                      height: "40px",
-                      width: "60px",
-                      objectFit: "contain",
-                    }}
-                    src={row.courseThumbnail}
-                    alt=""
-                  />
-                                                        </div>
+                                                        
                                                         <div className="product-pera">
                                                             <p className="priceDis">
                                                             {row.courseName}
@@ -89,26 +83,7 @@ const CourseInfo = ({course}) => {
                                                 {row.teacher}
                                                                                                     </td>
                                                 <td className="tableId">{row.courseLink}</td>
-                                                <td className="tableStatus">
-                                                                                                            <div className="statusItem">
-                                                            <div className="circleDot animatedCompleted"></div>
-                                                            <div className="statusText">
-                                                                <span className="stutsCompleted">Active</span>
-                                                            </div>
-                                                        </div>
-                                                                                                    </td>
-                                                <td className="tableAction">
-                                                    <div className="action-icon">
-                                              <Link data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                data-bs-custom-className="custom-tooltip"
-                                                                data-bs-title="Edit Course"
-                                                                to="/updatedashCourse"><EditIcon color="primary" /></Link>
-                                                                     
-                                                       <IconButton onClick={() => deleteCourseHandler(row._id)}>
-                    <DeleteIcon style={{ color: "red" }} />
-                  </IconButton>
-                                                                                                            </div>
-                                                </td>
+                                              
                                             </tr>
                                                 
                                                                                                                                                         

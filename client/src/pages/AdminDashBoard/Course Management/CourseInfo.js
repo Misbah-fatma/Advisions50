@@ -46,7 +46,7 @@ const CourseInfo = ({course}) => {
                     <div className="card mb-5">
                         <div className="card-body">
                             <div className="table-responsive">
-                                <table id="dataTable" className="table table-responsive-xl">
+                                <table id="dataTable" className="table table-responsive-xl text-center">
                                     <thead>
                                         <tr>
                                           

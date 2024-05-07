@@ -273,7 +273,7 @@ const Sidebar = () => {
           </div>
           <div className="branding-logo-forMobile mb-4">
             <a href="/home">
-              <img src="http://admin.razinskills.com/assets/images/app-logo.svg" alt=""/>
+             
             </a>
           </div>
           <div className="app-sidebar-inner">
@@ -288,20 +288,19 @@ const Sidebar = () => {
       <div className="option" onClick={() => toggleOptions('option2')}>
         <NavLink  activeClassName="active-link vertical-nav-menu">
         <i className="fa-solid fa-gem menu-icon"></i>
-                  Course Management
-                
+                All Courses
         </NavLink>
         {showOptions.option2 &&
           <div className="sub-options">
-            <NavLink to="/category" activeClassName="active-link">
+            <NavLink to="/TeacherDashCategory" activeClassName="active-link">
               <i className="fa-solid fa-swatchbook"></i>
               &nbsp;  Category
             </NavLink>
-            <NavLink to="/DashBoardCourse" activeClassName="active-link">
+            <NavLink to="/TeacherDashCourse" activeClassName="active-link">
               <i className="fa-solid fa-book-open-reader" ></i>
               &nbsp; All Course
             </NavLink>
-            <NavLink to="/chapter" activeClassName="active-link">
+            <NavLink to="/TeacherDashChapter" activeClassName="active-link">
               <i className="fa-solid fa-photo-film"></i>
               &nbsp; Chapter
             </NavLink>

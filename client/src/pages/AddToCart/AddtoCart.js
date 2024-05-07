@@ -16,7 +16,7 @@ const Cart = () => {
         <div className="row">
           <div className="col-md-12 py-5 bg-light text-center">
             <h4 className="p-3 display-5">Your Cart is Empty</h4>
-            <Link to="/" className="btn  btn-outline-dark mx-4">
+            <Link to="/home" className="btn  btn-outline-dark mx-4">
               <i className="fa fa-arrow-left"></i> Continue Shopping
             </Link>
           </div>
@@ -193,7 +193,7 @@ const Cart = () => {
     <>
 <Navbar />
 
-      <div className="container my-3 py-3">
+      <div className="container my-3 py-3 mt-4"><br/><br/>
         <h1 className="text-center h1">Cart</h1>
   
 

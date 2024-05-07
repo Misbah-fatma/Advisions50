@@ -12,11 +12,15 @@ const Category = () => {
             <div className="page-title-actions px-3 d-flex">
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="/studentDashboard">Dashboard</a></li>
+                        <li className="breadcrumb-item"><a href="https://admin.razinskills.com">Dashboard</a></li>
                         <li className="breadcrumb-item active" aria-current="page">Category</li>
                     </ol>
                 </nav>
-               
+                <div className="ms-auto mb-3">
+                    <a href="https://admin.razinskills.com/category/create" className="btn-shadow mr-3 btn btn-dark ms-auto">
+                        + New Category
+                    </a>
+                </div>
             </div>
 
             <div className="row" id="deleteTableItem">
@@ -24,7 +28,7 @@ const Category = () => {
                     <div className="card mb-5">
                         <div className="card-body">
                             <div className="table-responsive-lg">
-                                <table id="dataTable" className="table text-center">
+                                <table id="dataTable" className="table">
                                     <thead>
                                         <tr>
                                             <th><strong>#</strong></th>
@@ -32,12 +36,12 @@ const Category = () => {
                                             <th><strong>Featured</strong></th>
                                             <th><strong>Color</strong></th>
                                             <th><strong>Status</strong></th>
-                                           
+                                          
                                         </tr>
                                     </thead>
-                                    <tbody className='text-center'>
-                                             <tr>
-                                                <td className="tableId ">1</td>
+                                    <tbody>
+                                                                                    <tr>
+                                                <td className="tableId">1</td>
                                                 <td className="tableProduct">
                                                     <div className="listproduct-section">
                                                         <div className="listproducts-image">
@@ -58,14 +62,14 @@ const Category = () => {
                                                     #ff7b00</td>
 
                                                 <td className="tableStatus">
-                                                         <div className="statusItem">
+                                                                                                            <div className="statusItem">
                                                             <div className="circleDot animatedCompleted"></div>
                                                             <div className="statusText">
                                                                 <span className="stutsCompleted">Active</span>
                                                             </div>
                                                         </div>
                                                                                                     </td>
-                                                
+                                               
                                             </tr>
                                                                                     <tr>
                                                 <td className="tableId">2</td>
@@ -126,8 +130,8 @@ const Category = () => {
                                                                 <span className="stutsCompleted">Active</span>
                                                             </div>
                                                         </div>
-                                                        </td>
-                                            
+                                                                                                    </td>
+                                               
                                             </tr>
                                                                                     <tr>
                                                 <td className="tableId">4</td>
@@ -158,7 +162,7 @@ const Category = () => {
                                                             </div>
                                                         </div>
                                                                                                     </td>
-                                             
+                                               
                                             </tr>
                                                                             </tbody>
                                 </table>
