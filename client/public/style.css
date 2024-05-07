@@ -1,0 +1,67 @@
+
+.site-navbar .site-navigation {
+  background: #fff;
+  position: relative;
+}
+
+.site-navbar .site-navigation ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.site-navbar .site-navigation ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.site-navbar .site-navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.site-navbar .site-navigation ul li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-navbar .site-navigation ul li a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 991.98px) {
+  .site-navbar .site-navigation {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    transition: all 0.3s;
+    z-index: 9999;
+  }
+
+  .site-navbar .site-navigation.active {
+    left: 0;
+  }
+
+  .site-navbar .site-navigation ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-navbar .site-navigation ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .site-navbar .site-navigation ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .site-navbar .site-navigation ul li a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+}
